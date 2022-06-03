@@ -65,7 +65,7 @@ namespace FronkonGames.GameWork.Modules.AIModule
       if (states.ContainsKey(state.StateID) == false)
         states.Add(state.StateID, state);
       else
-        Log.Error($"The state '{state.StateID.GetType().Name}' already exists");
+        Log.Error($"The state '{state.GetType().Name}' already exists");
     }
 
     /// <summary>
@@ -104,8 +104,8 @@ namespace FronkonGames.GameWork.Modules.AIModule
         TStateID newStateID = CurrentState.GetTransitionStateID(transition);
         if (CurrentState.StateID.Equals(newStateID) == false)
           ChangeState(newStateID);
-        else
-          Log.Error($"Invalid transition '{transition.GetType().Name}' or returns the original state");
+        // else
+        //   Log.Error($"Invalid transition '{transition.ToString()}' or returns the original state '{newStateID.ToString()}'");
       }
       else
         Log.Error("No active state");

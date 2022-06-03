@@ -52,6 +52,15 @@ namespace FronkonGames.GameWork.Modules.AIModule
     /// <summary>
     /// 
     /// </summary>
+    /// <param name="stateID"></param>
+    public State(TStateID stateID)
+    {
+      StateID = stateID;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="transition"></param>
     /// <returns></returns>
     public TStateID GetStateID(TTransition transition) => transitions.ContainsKey(transition) == true ? transitions[transition] : StateID;

@@ -1,0 +1,12 @@
+{
+  "name": "FronkonGames.GameWork.Modules.AIModule.Test",
+  "references": [
+    "FronkonGames.GameWork.Modules.AIModule",
+    "FronkonGames.GameWork.Core",
+    "FronkonGames.GameWork.Foundation"
+  ],
+  "optionalUnityReferences": [ "TestAssemblies" ],
+  "includePlatforms": [ "Editor" ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false
+}

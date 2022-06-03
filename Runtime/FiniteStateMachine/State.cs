@@ -22,19 +22,15 @@ namespace FronkonGames.GameWork.Modules.AIModule
   /// <summary>
   /// State.
   /// </summary>
-  public abstract class State<TState, TStateID, TTransition>
+  public abstract class State<TState, TStateID, TTransition> where TState : class
+                                                             where TStateID : struct
+                                                             where TTransition : struct
   {
     /// <summary>
     /// 
     /// </summary>
     /// <value></value>
     public TStateID StateID { get; private set; }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <value></value>
-    public StateMachine<TState, TStateID, TTransition> StateMachine { get; private set; }
 
     /// <summary>
     /// 
@@ -51,20 +47,7 @@ namespace FronkonGames.GameWork.Modules.AIModule
     /// </summary>
     public abstract void OnExit();
 
-    protected TState Parent { get; private set; }
-
     protected Dictionary<TTransition, TStateID> transitions = new Dictionary<TTransition, TStateID>();
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="stateMachine"></param>
-    /// <param name="parent"></param>
-    public void Initialize(StateMachine<TState, TStateID, TTransition> stateMachine, TState parent)
-    {
-      Parent = parent;
-      StateMachine = stateMachine;
-    }
 
     /// <summary>
     /// 
@@ -72,6 +55,13 @@ namespace FronkonGames.GameWork.Modules.AIModule
     /// <param name="transition"></param>
     /// <returns></returns>
     public TStateID GetStateID(TTransition transition) => transitions.ContainsKey(transition) == true ? transitions[transition] : StateID;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="transition"></param>
+    /// <returns></returns>
+    public TStateID GetTransitionStateID(TTransition transition) => transitions.ContainsKey(transition) == true ? transitions[transition] : StateID;
 
     /// <summary>
     /// 

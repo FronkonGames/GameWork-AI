@@ -16,9 +16,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 using System.Collections;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
-using FronkonGames.GameWork.Modules.AIModule;
+using FronkonGames.GameWork.Modules.AI;
 
 /// <summary>
 /// AI module test.

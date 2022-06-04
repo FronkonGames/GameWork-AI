@@ -1,7 +1,7 @@
 {
-  "name": "FronkonGames.GameWork.Modules.AIModule.Test",
+  "name": "FronkonGames.GameWork.Modules.AI.Test",
   "references": [
-    "FronkonGames.GameWork.Modules.AIModule",
+    "FronkonGames.GameWork.Modules.AI",
     "FronkonGames.GameWork.Core",
     "FronkonGames.GameWork.Foundation"
   ],

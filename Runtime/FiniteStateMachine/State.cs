@@ -17,7 +17,7 @@
 using System.Collections.Generic;
 using FronkonGames.GameWork.Foundation;
 
-namespace FronkonGames.GameWork.Modules.AIModule
+namespace FronkonGames.GameWork.Modules.AI
 {
   /// <summary>
   /// State.

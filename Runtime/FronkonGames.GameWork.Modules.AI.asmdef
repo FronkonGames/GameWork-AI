@@ -1,5 +1,5 @@
 ﻿{
-  "name": "FronkonGames.GameWork.Modules.AIModule",
+  "name": "FronkonGames.GameWork.Modules.AI",
   "references":
   [
     "FronkonGames.GameWork.Core",

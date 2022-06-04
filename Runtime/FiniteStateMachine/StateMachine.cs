@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using FronkonGames.GameWork.Foundation;
 using FronkonGames.GameWork.Core;
 
-namespace FronkonGames.GameWork.Modules.AIModule
+namespace FronkonGames.GameWork.Modules.AI
 {
   /// <summary>
   /// Finite State Machine.
@@ -104,8 +104,6 @@ namespace FronkonGames.GameWork.Modules.AIModule
         TStateID newStateID = CurrentState.GetTransitionStateID(transition);
         if (CurrentState.StateID.Equals(newStateID) == false)
           ChangeState(newStateID);
-        // else
-        //   Log.Error($"Invalid transition '{transition.ToString()}' or returns the original state '{newStateID.ToString()}'");
       }
       else
         Log.Error("No active state");

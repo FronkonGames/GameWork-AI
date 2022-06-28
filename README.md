@@ -32,7 +32,7 @@
   "dependencies":
   {
     ...
-    "FronkonGames.GameWork.Modules.AIModule": "git+https://github.com/FronkonGames/GameWork-AI-Module.git",
+    "FronkonGames.GameWork.Modules.AIModule": "git+https://github.com/FronkonGames/GameWork-AI.git",
     "FronkonGames.GameWork.Core": "git+https://github.com/FronkonGames/GameWork-Core.git",
     "FronkonGames.GameWork.Foundation": "git+https://github.com/FronkonGames/GameWork-Foundation.git"
   }
